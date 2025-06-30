@@ -14,6 +14,8 @@
 #ifndef __ULAPACK_OPTIONS_H__
 #define __ULAPACK_OPTIONS_H__
 
+#include <rtthread.h>
+
 /*
  * Define the entry data type.
  */
@@ -67,9 +69,9 @@
 /*
  * Defined if memory should be initialized to zeros.
  */
-#ifndef ULAPACK_INITIALIZE_MEMORY
-#define ULAPACK_INITIALIZE_MEMORY
-#endif
+// #ifndef ULAPACK_INITIALIZE_MEMORY
+// #define ULAPACK_INITIALIZE_MEMORY
+// #endif
 
 /*
  * Option for using LU decomposition for matrix inversions.
@@ -81,7 +83,7 @@
 /*
  * Keep defined for static memory allocation declarations.
  */
-// #define ULAPACK_USE_STATIC_ALLOC
+#define ULAPACK_USE_STATIC_ALLOC
 
 /*
  * Keep defined for dynamic memory allocation.
@@ -138,10 +140,10 @@
      * @note only required to be specified when static allocation is used.
      */
     #ifndef ULAPACK_MAX_MATRIX_N_ROWS
-        #define ULAPACK_MAX_MATRIX_N_ROWS (20u)
+        #define ULAPACK_MAX_MATRIX_N_ROWS (5u)
     #endif
     #ifndef ULAPACK_MAX_MATRIX_N_COLS
-        #define ULAPACK_MAX_MATRIX_N_COLS (20u)
+        #define ULAPACK_MAX_MATRIX_N_COLS (5u)
     #endif
 
     /*
