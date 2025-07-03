@@ -1077,6 +1077,7 @@ MatrixError_t ulapack_product(const Matrix_t * const A,
     /*
      * Compute and store product in the result matrix.
      */
+    ulapack_set(result, 0.0);
     for(row_itor = 0; row_itor < A->n_rows; row_itor++) {
         for(col_itor = 0; col_itor < B->n_cols; col_itor++) {
             for(swap_itor = 0; swap_itor < A->n_cols; swap_itor++) {

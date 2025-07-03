@@ -69,9 +69,9 @@
 /*
  * Defined if memory should be initialized to zeros.
  */
-// #ifndef ULAPACK_INITIALIZE_MEMORY
-// #define ULAPACK_INITIALIZE_MEMORY
-// #endif
+#ifndef ULAPACK_INITIALIZE_MEMORY
+#define ULAPACK_INITIALIZE_MEMORY
+#endif
 
 /*
  * Option for using LU decomposition for matrix inversions.
